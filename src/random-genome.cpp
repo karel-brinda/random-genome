@@ -12,12 +12,20 @@ int main(int argc, char *argv[])
     srand(42);
 
     long long length = atol(argv[1]);
-    printf(">random_genome");
 
     char c = '~';
     char chars[] = "ACGT";
+    int j = 0;
     for (long long i = 0; i < length; i++)
     {
+        if (i % (100 * 1000 * 1000) == 0)
+        {
+            if (i != 0)
+            {
+                putchar('\n');
+            }
+            printf(">random_genome.contig%d", ++j);
+        }
         if (i % 1000 == 0)
         {
             putchar('\n');
