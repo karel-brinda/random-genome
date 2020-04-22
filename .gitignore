@@ -1,4 +1,5 @@
 random-genome
+*.fna
 
 # Prerequisites
 *.d
